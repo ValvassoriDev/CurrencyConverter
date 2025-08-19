@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-image: linear-gradient(
+    to right top,
+    #051937,
+    #004770,
+    #007c9e,
+    #00b4b9,
+    #12ebbe
+  );
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.container {
+  background: #fff;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 30px;
+  font-size: 1.8rem;
+}
+
+.converter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.currency-row {
+  display: flex;
+  gap: 15px;
+  align-items: end;
+}
+
+.currency-input {
+  flex: 2;
+}
+
+.currency-select {
+  flex: 1;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 15px;
+  border: 2px solid #e0e0e0;
+  background: #f8f9fa;
+  border-radius: 12px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #09eafa50;
+  background: #fff;
+  box-shadow: 0 5px 15px rgba(100, 195, 224, 0.507);
+  transform: translateY(-2px);
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: #555;
+  font-weight: 600;
+}
+
+.converter-btn {
+  background-image: linear-gradient(to right top, #007c9e, #12ebbe);
+  color: #fff;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+  display: block;
+}
+
+.converter-btn:hover {
+  box-shadow: 0 5px 15px rgba(100, 195, 224, 0.507);
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+}
+
+.loading {
+  margin-top: 20px;
+  display: none;
+}
+
+.spinner {
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #00b4b9;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  margin: 0 auto;
+  animation: spin 0.5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.info {
+  margin-top: 30px;
+  font-size: 15px;
+  color: #666;
+}
+
+.result {
+  background-image: linear-gradient(to right top, #32c5ee, #4fc9b0);
+  padding: 20px;
+  margin-top: 30px;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 15px;
+  display: none;
+}
+
+.error {
+  background-image: linear-gradient(to right top, #319fbd, #49eecd);
+  color: #fff;
+  padding: 15px;
+  border-radius: 15px;
+  margin-top: 20px;
+  display: none;
+}
